@@ -1,3 +1,7 @@
 module.exports = {
-  preset: '@vue/cli-plugin-unit-jest/presets/no-babel'
+    preset: '@vue/cli-plugin-unit-jest',
+    transformIgnorePatterns: ['/node_modules/(?!(axios)/)'],
+    transform: {
+        '^.+\\.vue$': '@vue/vue3-jest',
+    }
 }
